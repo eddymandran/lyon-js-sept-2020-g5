@@ -16,7 +16,7 @@ export default function useAwaitableState(defaultValue, debugValue = '') {
       valueRef.current = value;
       resolverFunction.current(value);
     }
-  }, [value]); 
+  }, [value]);
   const awaitableSetter = useCallback((newValueOrFunction) => {
     return new Promise((resolve) => {
       // if two consecutive setState are called
